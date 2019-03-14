@@ -1,0 +1,64 @@
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+</head>
+<body>
+
+<h1>DATACODE</h1>
+<p id="demo"> </p>
+
+<script>alert("Registration Completed")
+
+  // window.location.href = "display";
+
+document.getElementById("demo").innerHTML = "My First JavaScript";
+console.log("My First CODE")
+
+</script>
+
+<h2>All User Details</h2>
+    
+<table >
+     
+    <th>UserID</th>
+    <th>NAme</th>
+    <th>Password</th>
+
+    {% for item in p %}
+    <tr  >
+        <td  bgcolor="orange">{{ item.userid }}</td>
+        <td > {{ item.name }}</td>
+        <td bgcolor="orange"> {{ item.password }}</td>
+    </tr>
+
+    <tr>
+    <td colspan="3" class="divider"><hr/></td>
+</tr>
+    {% endfor %}
+    {{endif}}
+</table>
+
+<table >
+    <th>UserID</th>
+    <th>Name</th>
+    <th>Password/th>
+
+    {% for item in p1 %}
+    <tr  >
+        <td  bgcolor="orange">{{ item.userid}}</td>
+        <td > {{ item.name }}</td>
+        <td bgcolor="orange"> {{ item.password }}</td>
+    </tr>
+
+    <tr>
+    <td colspan="3" class="divider"><hr/></td>
+</tr>
+    {% endfor %}
+</table>
+
+</body>
+
+</html>

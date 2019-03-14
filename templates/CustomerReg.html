@@ -1,0 +1,29 @@
+<center>
+	<h1>
+		
+		Customer REG FORM
+	</h1>
+</center>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer  Registration</title>
+</head>
+
+<body>
+<center>
+<h2>Cutomer Registration</h2>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <table>
+    {{form.as_table}}
+ 	</table>
+	<input type="submit" value="Submit"  />
+
+</form>
+</center>
+</body>
+</html>
