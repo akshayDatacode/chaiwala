@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ModelForm Tutorial</title>
+</head>
+<body>
+<h2>All Chai Order</h2>
+<table>
+    {% for item in users %}
+    <tr>
+        <td><b>USER:</b>{{ item.User }}</td>
+        <td><b>Chaiwala:</b>{{ item.Chaiwala }}</td>
+        <td><b>Quantity:</b> {{ item.Quantity|default:"NA" }}</td>
+        
+    </tr>
+    <tr>
+    <td colspan="2" class="divider"><hr/></td>
+</tr>
+    {% endfor %}
+</table>
+</body>
+</html>

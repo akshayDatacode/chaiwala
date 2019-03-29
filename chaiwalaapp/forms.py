@@ -1,13 +1,7 @@
 from django.forms import ModelForm
-from .models import *
+from chaiwalaapp.models import Chai_Order_Model
 
-class ChaiwalaReg_Form(ModelForm):
+class Chai_Order_From(ModelForm):
     class Meta:
-        model = ChaiwalaReg_Model
-        fields = '__all__'
-
-class CustomerReg_Form(ModelForm):
-    class Meta:
-        model = CustomerReg_Model
-        fields = '__all__'
-
+        model = Chai_Order_Model
+        fields = ['User','Chaiwala', 'Quantity']

@@ -25,9 +25,10 @@ SECRET_KEY = 'u-6!c+kvjh=j#r55%4w*ysmpi%dc8@h_3-r!0c*@!^6crd*@yl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+ACCOUNT_ACTIVATION_DAYS=True
 ALLOWED_HOSTS = []
 
-
+LOGIN_REDIRECT_URL ='dashboard'
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,8 +39,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'chaiwalaapp',
-    
+    'widget_tweaks',    
 ]
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'anapatel218@gmail.com'
+EMAIL_HOST_PASSWORD = 'Akshay@25'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -56,7 +65,7 @@ ROOT_URLCONF = 'chaiwalaproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,3 +130,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles/")
+
+STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static')]
+
+
+
+

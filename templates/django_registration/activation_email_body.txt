@@ -1,0 +1,3 @@
+Dear {{user.username}},
+
+{{scheme}}://{{request.get_host}}/accounts/activate/{{activation_key}}
